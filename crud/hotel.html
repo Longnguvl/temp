@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .form-group {
+            margin: 10px 0;
+        }
+        input {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .actions button {
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Hotel Management System</h2>
+    
+
+    <div id="hotelForm">
+        <div class="form-group">
+            <input type="hidden" id="hotelId">
+            <input type="text" id="hotelName" placeholder="Hotel Name">
+            <input type="number" id="hotelPrice" placeholder="Price">
+            <input type="text" id="hotelLocation" placeholder="Location">
+            <button onclick="handleSubmit()">Add Hotel</button>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Location</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="hotelTableBody"></tbody>
+    </table>
+
+    <script src="hotel.js"></script>
+</body>
+</html>
